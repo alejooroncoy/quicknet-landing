@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import { ArrowRightIcon } from "lucide-react";
+import HeroImg from "@/assets/hero_img.jpg";
+---
+
+<section class="w-full pt-6 md:pt-12 lg:pt-16 pb-12 md:pb-24 lg:pb-32">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
+      <div class="flex flex-col justify-center space-y-4">
+        <div class="space-y-2">
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+            Empoderando a las empresas para prepararse ante lo inesperado
+          </h1>
+          <p class="max-w-[600px] text-muted-foreground md:text-xl">
+            QuakeNet utiliza IA, aprendizaje automático y big data para
+            ayudar a las empresas a evaluar y mitigar los riesgos
+            sísmicos, permitiéndoles tomar decisiones informadas y
+            proteger sus operaciones.
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 min-[400px]:flex-row">
+          <a
+            href="#contacto-empresa"
+            class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+        
+          >
+            Solicitar acceso
+            <ArrowRightIcon class="ml-2 h-4 w-4" />
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center">
+        <Image
+          src={HeroImg}
+          width="550"
+          height="550"
+          alt="Hero"
+          class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+        />
+      </div>
+    </div>
+  </div>
+</section>

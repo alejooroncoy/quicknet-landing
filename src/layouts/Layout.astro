@@ -1,0 +1,22 @@
+---
+import Footer from "@/sections/Footer";
+import Header from "@/sections/Header";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quicknet</title>
+    <meta
+      name="description"
+      content="QuakeNet, plataforma que ayuda a las empresas a evaluar y mitigar los riesgos sísmicos."
+    />
+  </head>
+  <body class="min-h-dvh flex flex-col">
+    <Header client:load />
+    <slot />
+    <Footer client:load />
+  </body>
+</html>

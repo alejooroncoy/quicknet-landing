@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    scroll-behavior: smooth;
+    --destructive-foreground: 220 30% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --popover-foreground: 220 30% 10%;
+    --primary-foreground: 0 0% 100%;
+    --accent-foreground: 220 30% 10%;
+    --muted-foreground: 220 30% 20%;
+    --card-foreground: 220 30% 10%;
+    --destructive: 45 80% 85%;
+    --background: 220 20% 95%;
+    --foreground: 220 30% 10%;
+    --secondary: 226 40% 51%;
+    --popover: 220 20% 95%;
+    --primary: 226 40% 43%;
+    --border: 220 30% 59%;
+    --accent: 226 60% 72%;
+    --muted: 220 30% 90%;
+    --input: 220 30% 63%;
+    --card: 220 20% 95%;
+    --ring: 226 40% 43%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .bg-animation {
+    animation-name: animation-appear;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-direction: alternate;
+    animation-timeline: scroll(block nearest);
+  }
+  @keyframes  animation-appear{
+    0% {
+      background-color: transparent;
+    }
+    50%, 100% {
+      background-color: hsl(var(--background));
+    }
+  }
+}

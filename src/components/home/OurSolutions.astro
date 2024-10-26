@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import SolutionIntegrations from "@/assets/solution_integrations.webp";
+import { CompassIcon, EarthIcon, TrendingUpIcon } from "lucide-react";
+---
+
+<section id="soluciones" class="w-full py-12 md:py-24 lg:py-32">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="flex flex-col items-center justify-center space-y-4 text-center">
+      <div class="space-y-2">
+        <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+          Nuestras Soluciones
+        </div>
+        <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
+          Soluciones Integrales para la Resiliencia Sísmica
+        </h2>
+        <p class="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          QuakeNet ofrece una suite de herramientas y servicios impulsados
+          por IA para ayudar a las empresas a evaluar, mitigar y responder
+          a los riesgos sísmicos, asegurando la seguridad de sus
+          operaciones y empleados.
+        </p>
+      </div>
+    </div>
+    <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+      <div class="flex flex-col justify-center space-y-4">
+        <ul class="grid gap-6">
+          <li>
+            <div class="grid gap-1">
+              <div class="flex items-center gap-2">
+                <EarthIcon class="h-6 w-6" />
+                <h3 class="text-xl font-bold">
+                  Evaluación de Riesgos
+                </h3>
+              </div>
+              <p class="text-muted-foreground">
+                Analiza los niveles de riesgo sísmico para las ubicaciones
+                de tu negocio utilizando IA avanzada y big data.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="grid gap-1">
+              <div class="flex items-center gap-2">
+                <CompassIcon class="h-6 w-6" />
+                <h3 class="text-xl font-bold">
+                  Planificación de Evacuación
+                </h3>
+              </div>
+              <p class="text-muted-foreground">
+                Desarrolla planes de evacuación integrales para garantizar
+                la seguridad de tus empleados y activos.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="grid gap-1">
+              <div class="flex items-center gap-2">
+                <TrendingUpIcon class="h-6 w-6" />
+                <h3 class="text-xl font-bold">Análisis Predictivo</h3>
+              </div>
+              <p class="text-muted-foreground">
+                Aprovecha el aprendizaje automático para pronosticar la
+                actividad sísmica y optimizar tus estrategias de respuesta
+                ante desastres.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="flex justify-center">
+        <Image
+          src={SolutionIntegrations}
+          width={450}
+          alt="Earthquake Icon"
+          class="text-primary rounded object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
